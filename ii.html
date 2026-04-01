@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pandhagooo!!! — Pure Multi Cuisine</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --c1:#5E0006;--c2:#9B0F06;--c3:#D53E0F;--c4:#EED9B9;
+  --paper:#FDF7EE;--paper2:#F7EFE0;--ink:#2E0A04;--muted:#7A4A38;
+  --lb:rgba(94,0,6,0.12);
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);font-family:'DM Sans',sans-serif;color:var(--ink);overflow-x:hidden}
+
+/* HERO SECTION */
+.hero{background:var(--c1);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:60px 24px}
+.hc1{position:absolute;width:500px;height:500px;border-radius:50%;background:var(--c2);opacity:.35;top:-150px;left:-120px;animation:fa 8s ease-in-out infinite}
+.hc2{position:absolute;width:380px;height:380px;border-radius:50%;background:var(--c3);opacity:.2;bottom:-100px;right:-80px;animation:fb 10s ease-in-out infinite}
+.hc3{position:absolute;width:200px;height:200px;border-radius:50%;border:1px solid rgba(238,217,185,.15);top:40%;left:10%;animation:fc 12s ease-in-out infinite}
+@keyframes fa{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,30px)}}
+@keyframes fb{0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,20px)}}
+@keyframes fc{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(10px,-10px) scale(1.05)}}
+.hi{position:relative;z-index:1}
+.horn{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:6px;text-transform:uppercase;color:var(--c4);opacity:.6;margin-bottom:16px;animation:fu 1s ease both}
+.htitle{font-family:'Playfair Display',serif;font-size:clamp(56px,10vw,110px);font-weight:900;font-style:italic;color:var(--c4);line-height:.95;letter-spacing:-2px;animation:fu 1s .15s ease both;text-shadow:0 4px 40px rgba(0,0,0,.4)}
+.hdiv{display:flex;align-items:center;gap:16px;justify-content:center;margin:24px 0;animation:fu 1s .3s ease both}
+.hdl{width:60px;height:1px;background:var(--c4);opacity:.35}
+.hdg{width:6px;height:6px;background:var(--c3);transform:rotate(45deg)}
+.htagl{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,3vw,22px);font-weight:300;font-style:italic;color:var(--c4);opacity:.8;letter-spacing:2px;animation:fu 1s .45s ease both}
+.htags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px;animation:fu 1s .6s ease both}
+.htag{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--c4);border:.5px solid rgba(238,217,185,.35);padding:6px 16px;border-radius:40px;opacity:.75}
+.scroll-h{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:fu 1s 1s ease both;z-index:1}
+.scroll-h span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--c4);opacity:.45}
+.sarr{width:1px;height:30px;background:linear-gradient(to bottom,rgba(238,217,185,.4),transparent);animation:sp 2s ease-in-out infinite}
+@keyframes sp{0%,100%{opacity:.4}50%{opacity:1}}
+@keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* NAVBAR */
+.navbar{position:sticky;top:0;z-index:50;background:rgba(253,247,238,.92);backdrop-filter:blur(12px);border-bottom:.5px solid var(--lb);padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-brand{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;font-style:italic;color:var(--c1)}
+.nav-links{display:flex;gap:6px;list-style:none}
+.nav-links a{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:6px 14px;border-radius:40px;transition:all .2s}
+.nav-links a:hover,.nav-links a.active{background:var(--c1);color:var(--c4)}
+
+/* MENU GRID */
+.section-head{text-align:center;padding:64px 24px 40px}
+.section-pre{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--c3);font-weight:500;margin-bottom:10px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,52px);font-weight:900;font-style:italic;color:var(--c1);line-height:1.05}
+.section-rule{display:flex;align-items:center;gap:14px;justify-content:center;margin:16px 0 0}
+.rl{width:50px;height:.5px;background:var(--c3);opacity:.4}
+.rd{width:5px;height:5px;background:var(--c3);border-radius:50%;opacity:.6}
+
+.menu-section{padding:0 24px 80px;max-width:1200px;margin:0 auto}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px;background:var(--lb);border:.5px solid var(--lb);overflow:hidden}
+
+.card{background:var(--paper);position:relative;overflow:hidden;transition:background .3s}
+.card:hover{background:var(--paper2)}
+
+.card-img-wrap{width:100%;height:220px;overflow:hidden;position:relative}
+.card-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(30,5,2,.55) 100%);z-index:3;pointer-events:none}
+
+.food-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:100px;z-index:1;transition:transform .4s ease}
+.card:hover .food-art{transform:scale(1.08)}
+
+.card-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;opacity:0;transition:opacity .5s ease, transform .6s ease}
+.card-photo.loaded{opacity:1}
+.card:hover .card-photo{transform:scale(1.05)}
+
+.card-badge{position:absolute;top:14px;right:14px;z-index:4;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:20px;font-weight:500}
+.badge-hot{background:var(--c3);color:white}
+.badge-cool{background:rgba(238,217,185,.9);color:var(--c1)}
+.badge-pop{background:var(--c1);color:var(--c4)}
+.badge-sweet{background:rgba(155,15,6,.85);color:var(--c4)}
+.card-number{position:absolute;bottom:14px;left:16px;z-index:4;font-family:'Playfair Display',serif;font-size:11px;font-style:italic;color:rgba(238,217,185,.7);letter-spacing:1px}
+
+.card-body{padding:20px 20px 18px}
+.card-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--c1);margin-bottom:6px;line-height:1.15}
+.card-desc{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--muted);line-height:1.5;margin-bottom:16px}
+.card-footer{display:flex;align-items:center;justify-content:space-between;border-top:.5px solid var(--lb);padding-top:14px}
+.view-btn{display:flex;align-items:center;gap:8px;background:none;border:.5px solid var(--c3);color:var(--c3);font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;border-radius:40px;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;transition:all .25s}
+.view-btn:hover{background:var(--c3);color:white}
+.view-btn svg{width:12px;height:12px;flex-shrink:0}
+.card-cuisine{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:var(--muted);opacity:.7}
+
+/* BG COLORS FOR ART */
+.bg-icecream{background:linear-gradient(135deg,#FBEACC,#F5CBA7,#E8A87C)}
+.bg-burger{background:linear-gradient(135deg,#C0832A,#8B4513,#5D2906)}
+.bg-pasta{background:linear-gradient(135deg,#F5D79E,#E8B86D,#C9843A)}
+.bg-pizza{background:linear-gradient(135deg,#D4570A,#A63C06,#7A2C04)}
+.bg-donuts{background:linear-gradient(135deg,#F9C6D0,#F48FB1,#C2185B)}
+.bg-sandwich{background:linear-gradient(135deg,#F5DEB3,#DEB887,#A0522D)}
+.bg-waffles{background:linear-gradient(135deg,#F4A460,#D2691E,#8B4513)}
+
+/* --- 3D MODAL ENHANCEMENTS --- */
+.modal-bg{position:fixed;inset:0;background:rgba(20,3,1,.9);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(10px)}
+.modal-bg.open{opacity:1;pointer-events:all}
+.modal{background:var(--paper);width:100%;max-width:520px;border-radius:2px;overflow:hidden;transform:translateY(30px) scale(.97);transition:transform .3s ease,opacity .3s ease;opacity:0;max-height:95vh;display:flex;flex-direction:column}
+.modal-bg.open .modal{transform:translateY(0) scale(1);opacity:1}
+
+/* The Flip Container */
+.flip-scene {
+    width: 100%;
+    height: 320px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+.flip-scene.is-flipped .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+    background: #000;
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    --poster-color: transparent;
+}
+
+.click-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.is-flipped .click-hint { opacity: 0; }
+
+.modal-img-wrap{position:relative;height:100%;overflow:hidden}
+.modal-img-wrap::after{content:'';position:absolute;inset:0;z-index:3;background:linear-gradient(to bottom,transparent 50%,rgba(94,0,6,.85) 100%);pointer-events: none;}
+
+.modal-title-overlay{position:absolute;bottom:20px;left:24px;z-index:4;pointer-events: none;}
+.modal-item-name{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;font-style:italic;color:var(--c4);line-height:1}
+.modal-item-sub{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:var(--c4);opacity:.7;margin-top:3px;letter-spacing:1px}
+.modal-close{position:absolute;top:14px;right:14px;z-index:100;width:32px;height:32px;background:rgba(30,5,2,.5);border:.5px solid rgba(238,217,185,.3);color:var(--c4);border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:background .2s}
+
+.modal-body{padding:24px 28px 28px;overflow-y:auto}
+.modal-stitle{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--c3);font-weight:500;margin-bottom:14px}
+.ing-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.ing-pill{background:rgba(94,0,6,.07);border:.5px solid rgba(94,0,6,.18);color:var(--c1);font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;padding:5px 14px;border-radius:40px;transition:all .2s;cursor:default}
+.ing-pill:hover{background:var(--c1);color:var(--c4)}
+.allergen-box{background:rgba(213,62,15,.06);border:.5px solid rgba(213,62,15,.2);border-radius:2px;padding:12px 16px}
+.allergen-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--c3);font-weight:500;margin-bottom:5px}
+
+footer{background:var(--c1);padding:40px 32px;text-align:center;position:relative;overflow:hidden}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:640px){.nav-links{display:none}.menu-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<section class="hero" id="home">
+  <div class="hc1"></div><div class="hc2"></div><div class="hc3"></div>
+  <div class="hi">
+    <div class="horn">Est. 2024 &nbsp;·&nbsp; Hyderabad</div>
+    <div class="htitle">pandhagooo!!!</div>
+    <div class="hdiv"><div class="hdl"></div><div class="hdg"></div><div class="hdl"></div></div>
+    <div class="htagl">A Pure Multi Cuisine Experience</div>
+    <div class="htags">
+      <span class="htag">Ice Creams</span><span class="htag">Burgers</span><span class="htag">Pizza</span>
+      <span class="htag">Pasta</span><span class="htag">Waffles</span><span class="htag">Donuts</span><span class="htag">Sandwiches</span>
+    </div>
+  </div>
+  <div class="scroll-h"><span>Explore Menu</span><div class="sarr"></div></div>
+</section>
+
+<nav class="navbar">
+  <div class="nav-brand">pandhagooo!!!</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu" class="active">Menu</a></li>
+  </ul>
+</nav>
+
+<div class="section-head reveal" id="menu">
+  <div class="section-pre">Curated Selection</div>
+  <div class="section-title">Our Menu</div>
+  <div class="section-rule"><div class="rl"></div><div class="rd"></div><div class="rl"></div></div>
+</div>
+
+<div class="menu-section">
+  <div class="menu-grid" id="menuGrid"></div>
+</div>
+
+<footer>
+  <div class="fi">
+    <div class="fbrand">pandhagooo!!!</div>
+    <div class="frule"></div>
+    <div class="ftagline">Crafted with love & the finest ingredients</div>
+    <div class="fcopy">© 2024 pandhagooo!!! &nbsp;·&nbsp; Pure Multi Cuisine</div>
+  </div>
+</footer>
+
+<div class="modal-bg" id="modalBg" onclick="handleOverlay(event)">
+  <div class="modal" id="modal">
+    <div class="flip-scene" id="flipScene" onclick="toggleFlip()">
+        <div class="click-hint">Click to see in 3D</div>
+        <button class="modal-close" onclick="closeModal(); event.stopPropagation();">✕</button>
+        
+        <div class="flip-card">
+            <div class="flip-front">
+                <div class="modal-img-wrap">
+                    <div class="modal-art" id="modalArt"></div>
+                    <img class="modal-photo" id="modalPhoto" src="" alt="">
+                    <div class="modal-title-overlay">
+                        <div class="modal-item-name" id="modalName"></div>
+                        <div class="modal-item-sub" id="modalSub"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-back">
+                <model-viewer id="3dViewer" 
+                    src="" 
+                    camera-controls 
+                    auto-rotate 
+                    shadow-intensity="1" 
+                    environment-image="neutral"
+                    exposure="1">
+                </model-viewer>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-stitle">Ingredients Used</div>
+      <div class="ing-wrap" id="modalIngs"></div>
+      <div class="allergen-box">
+        <div class="allergen-label">Allergen Info</div>
+        <div class="allergen-text" id="modalAllergen"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const items = [
+  {
+    id:'icecream', name:'Ice Cream', sub:'Handcrafted frozen dessert',
+    desc:'Velvety scoops made fresh daily in classic & seasonal flavours, finished with artisan toppings.',
+    badge:'badge-cool', badgeText:'Chilled', cuisine:'Dessert', num:'01',
+    bg:'bg-icecream', emoji:'🍦', glb:'icecream.glb',
+    photo:'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80',
+    ingredients:['Fresh Cream','Full-fat Milk','Cane Sugar','Egg Yolks','Vanilla Bean','Strawberry Pulp','Cocoa Powder','Stabiliser','Sea Salt','Waffle Cone','Pistachios','Caramel Swirl'],
+    allergen:'Contains milk & eggs. May contain nuts.'
+  },
+  {
+    id:'burger', name:'Burger', sub:'Classic stacked indulgence',
+    desc:'Juicy patty stacked high on a brioche bun with fresh produce, melted cheese & house sauces.',
+    badge:'badge-hot', badgeText:'Hot Pick', cuisine:'American', num:'02',
+    bg:'bg-burger', emoji:'🍔', glb:'burger.glb',
+    photo:'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80',
+    ingredients:['Brioche Bun','Beef Patty','Cheddar Cheese','Iceberg Lettuce','Beefsteak Tomato','Red Onion','Gherkins','House Burger Sauce','Butter'],
+    allergen:'Contains gluten, dairy & eggs.'
+  },
+  {
+    id:'pasta', name:'Pasta', sub:'Italian-inspired slow cook',
+    desc:'Al dente pasta tossed in slow-cooked house sauces, finished with fresh herbs & shaved parmesan.',
+    badge:'badge-pop', badgeText:'Favourite', cuisine:'Italian', num:'03',
+    bg:'bg-pasta', emoji:'🍝', glb:'pasta.glb',
+    photo:'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80',
+    ingredients:['Durum Wheat Pasta','San Marzano Tomatoes','Garlic','Extra Virgin Olive Oil','Fresh Basil','Parmesan','Dried Oregano'],
+    allergen:'Contains gluten & dairy.'
+  },
+  {
+    id:'pizza', name:'Pizza', sub:'Stone-fired thin crust',
+    desc:'Hand-stretched thin crust fired in a stone oven, crowned with premium toppings & signature tomato sauce.',
+    badge:'badge-hot', badgeText:'Hot Pick', cuisine:'Italian', num:'04',
+    bg:'bg-pizza', emoji:'🍕', glb:'pizza.glb',
+    photo:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80',
+    ingredients:['00 Flour Dough','San Marzano Tomato Sauce','Fresh Mozzarella','Extra Virgin Olive Oil','Fresh Basil','Garlic','Dried Oregano'],
+    allergen:'Contains gluten & dairy.'
+  },
+  {
+    id:'donuts', name:'Donuts', sub:'Glazed fresh every morning',
+    desc:'Pillowy rings glazed, frosted & filled — baked fresh every morning in our kitchen.',
+    badge:'badge-sweet', badgeText:'Sweet', cuisine:'Dessert', num:'05',
+    bg:'bg-donuts', emoji:'🍩', glb:'donut.glb',
+    photo:'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80',
+    ingredients:['All-purpose Flour','Whole Milk','Free-range Eggs','Unsalted Butter','Active Yeast','Cane Sugar','Vanilla Extract','Rainbow Sprinkles'],
+    allergen:'Contains gluten, dairy & eggs.'
+  },
+  {
+    id:'sandwich', name:'Sandwich', sub:'Artisan bread, grilled to perfection',
+    desc:'Rustic artisan bread loaded with premium fillings, grilled until golden & served warm.',
+    badge:'badge-pop', badgeText:'Light Bite', cuisine:'Continental', num:'06',
+    bg:'bg-sandwich', emoji:'🥪', glb:'sand.glb',
+    photo:'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&q=80',
+    ingredients:['Sourdough Bread','Grilled Chicken / Paneer','Aged Cheddar','Iceberg Lettuce','Vine Tomato','Herb Mayo'],
+    allergen:'Contains gluten & dairy.'
+  },
+  {
+    id:'waffles', name:'Waffles', sub:'Crispy outside, cloud-soft inside',
+    desc:'Belgian-style waffles with a shatteringly crisp exterior, topped with syrups, cream & fresh berries.',
+    badge:'badge-cool', badgeText:'Sweet', cuisine:'Belgian', num:'07',
+    bg:'bg-waffles', emoji:' waffle', glb:'waf.glb',
+    photo:'https://images.unsplash.com/photo-1562376552-0d160a2f238d?w=800&q=80',
+    ingredients:['All-purpose Flour','Free-range Eggs','Whole Milk','Unsalted Butter','Pure Maple Syrup','Fresh Mixed Berries'],
+    allergen:'Contains gluten, dairy & eggs.'
+  }
+];
+
+const grid = document.getElementById('menuGrid');
+
+items.forEach((item, i) => {
+  const card = document.createElement('div');
+  card.className = 'card reveal';
+  card.style.transitionDelay = (i * 0.07) + 's';
+  card.innerHTML = `
+    <div class="card-img-wrap">
+      <div class="food-art ${item.bg}" style="font-size:90px">${item.emoji}</div>
+      <img class="card-photo" src="${item.photo}" alt="${item.name}" crossorigin="anonymous">
+      <span class="card-badge ${item.badge}">${item.badgeText}</span>
+      <span class="card-number">${item.num}</span>
+    </div>
+    <div class="card-body">
+      <div class="card-name">${item.name}</div>
+      <div class="card-desc">${item.desc}</div>
+      <div class="card-footer">
+        <button class="view-btn" onclick="openModal('${item.id}')">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="8" cy="8" r="6.5"/>
+            <line x1="8" y1="5.5" x2="8" y2="8.5"/>
+            <circle cx="8" cy="10.5" r=".5" fill="currentColor" stroke="none"/>
+          </svg>
+          Experience 3D
+        </button>
+        <span class="card-cuisine">${item.cuisine}</span>
+      </div>
+    </div>`;
+  grid.appendChild(card);
+
+  const img = card.querySelector('.card-photo');
+  img.onload = () => img.classList.add('loaded');
+});
+
+function openModal(id) {
+  const item = items.find(i => i.id === id);
+  if (!item) return;
+
+  // Reset Flip state
+  document.getElementById('flipScene').classList.remove('is-flipped');
+  
+  document.getElementById('modalName').textContent = item.name;
+  document.getElementById('modalSub').textContent = item.sub;
+  document.getElementById('modalAllergen').textContent = item.allergen;
+
+  // Set Photo
+  const ph = document.getElementById('modalPhoto');
+  ph.src = item.photo;
+  
+  // Set 3D Model
+  const viewer = document.getElementById('3dViewer');
+  viewer.src = item.glb;
+
+  const wrap = document.getElementById('modalIngs');
+  wrap.innerHTML = '';
+  item.ingredients.forEach(ing => {
+    const p = document.createElement('span');
+    p.className = 'ing-pill';
+    p.textContent = ing;
+    wrap.appendChild(p);
+  });
+
+  document.getElementById('modalBg').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function toggleFlip() {
+    document.getElementById('flipScene').classList.toggle('is-flipped');
+}
+
+function closeModal() {
+  document.getElementById('modalBg').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleOverlay(e) {
+  if (e.target === document.getElementById('modalBg')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, {threshold: 0.1});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
